@@ -3,6 +3,7 @@
 use App\Livewire\Cart;
 use App\Livewire\Checkout;
 use App\Livewire\Contact;
+use App\Livewire\Dashboard;
 use App\Livewire\Home;
 use App\Livewire\Login;
 use App\Livewire\NotFound;
@@ -32,5 +33,6 @@ Route::get('/produit', SingleProduct::class)->name("single_product");
 Route::get('/panier', Cart::class)->name("cart");
 Route::get('/commande', Checkout::class)->name("checkout");
 Route::get('/connexion', Login::class)->name("login");
+Route::get('/dashboard', Dashboard::class)->name("dashboard");
 
 Route::fallback(NotFound::class)->name("notfound");

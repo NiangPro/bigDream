@@ -28,8 +28,6 @@
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <a wire:navigate href="{{route('cart')}}" class="dropdown-item">Panier</a>
                             <a wire:navigate href="{{route('checkout')}}" class="dropdown-item">Commander</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
                     <a wire:navigate href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
@@ -40,7 +38,7 @@
                         <i class="fa fa-shopping-bag fa-2x"></i>
                         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                     </a>
-                    <a wire:navigate href="{{route('login')}}" class="my-auto">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@getbootstrap" class="my-auto">
                         <i class="fas fa-user fa-2x"></i>
                     </a>
                 </div>

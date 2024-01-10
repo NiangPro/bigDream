@@ -42,6 +42,10 @@
         <livewire:modal-search />
         <!-- Modal Search End -->
 
+        <!-- Modal login Start -->
+        <livewire:login />
+        <!-- Modal login End -->
+
         @if(!request()->is('/'))
             <!-- Single Page Header start -->
             <div class="container-fluid page-header py-5">

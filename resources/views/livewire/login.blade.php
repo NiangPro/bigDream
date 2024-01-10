@@ -1,13 +1,28 @@
-<div>
-    <div class="container col-md-8 mt-3 rounded position-relative fruite-item">
-        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-        <div class="p-4 border border-secondary rounded">
-            <h4>Oranges</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-            <div class="d-flex justify-content-between flex-lg-wrap">
-                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-            </div>
+<div wire:ignore.self class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">{{$title}}</h1>
+          <button type="button" wire:click='changeStatut' class="btn btn-outline-primary"> @if($statut == 0) Créer un compte @else Connexion @endif</button>
         </div>
+        <div class="modal-body" >
+          @if($statut == 0)
+            <form>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Email</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="recipient-password">
+                </div>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-outline-primary">Se connecter</button>
+            </form>
+          @else 
+
+          @endif
+        </div>
+      </div>
     </div>
-</div>
+  </div>
