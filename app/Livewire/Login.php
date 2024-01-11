@@ -21,7 +21,7 @@ class Login extends Component
             $this->title = 'Connexion';
         }
 
-        $this->redirect(route('dashboard'));
+        $this->redirect(route('superadmin'));
         // $this->redirect(route('dashboard'), navigate:true);
     }
     public function render()
