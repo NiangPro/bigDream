@@ -1,10 +1,12 @@
 <?php
 
+use App\Livewire\Admin;
 use App\Livewire\Agences;
 use App\Livewire\Cart;
 use App\Livewire\Checkout;
 use App\Livewire\Contact;
 use App\Livewire\Dashboard;
+use App\Livewire\Historiques;
 use App\Livewire\Home;
 use App\Livewire\Login;
 use App\Livewire\NotFound;
@@ -38,5 +40,7 @@ Route::get('/connexion', Login::class)->name("login");
 Route::get('/dashboard', Dashboard::class)->name("dashboard");
 Route::get('/dashboard_superadmin', Super::class)->name("superadmin");
 Route::get('/agences', Agences::class)->name("agence");
+Route::get('/historiques', Historiques::class)->name("historique");
+Route::get('/admins', Admin::class)->name("admin");
 
 Route::fallback(NotFound::class)->name("notfound");

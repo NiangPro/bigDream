@@ -18,10 +18,21 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'prenom',
+        'nom',
         'email',
         'password',
+        'role',
+        'adresse',
+        'tel',
+        'image',
+        'depot_id',
     ];
+
+    public function depot()
+    {
+        return $this->belongsTo(Depot::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

@@ -3,8 +3,8 @@ $(function(){
 	$('#basicExample').DataTable({
 		"lengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50, "All"]],
 		"language": {
-			"lengthMenu": "Display _MENU_ Records Per Page",
-			"info": "Showing Page _PAGE_ of _PAGES_",
+			"lengthMenu": "Afffichez _MENU_ Par Page",
+			"info": "Page _PAGE_ sur _PAGES_",
 		}
 	});
 });
@@ -46,7 +46,7 @@ $(function(){
 	$('#apiCallbacks').DataTable({
 		"lengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50, "All"]],
 		"language": {
-			"lengthMenu": "Display _MENU_ Records Per Page",
+			"lengthMenu": "Afffichez _MENU_ Par Page",
 		},
 		"initComplete": function(){
 			var api = this.api();
@@ -64,8 +64,8 @@ $(function(){
 		"lengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50, "All"]],
 		"searching": false,
 		"language": {
-			"lengthMenu": "Display _MENU_ Records Per Page",
-			"info": "Showing Page _PAGE_ of _PAGES_",
+			"lengthMenu": "Afffichez _MENU_ Par Page",
+			"info": "Page _PAGE_ sur _PAGES_",
 		}
 	});
 });

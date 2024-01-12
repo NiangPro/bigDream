@@ -8,6 +8,11 @@ var cleave = new Cleave('#phone-format-in', {
 	phoneRegionCode: 'IN'
 });
 
+var cleave = new Cleave('#phone-format-sn', {
+	phone: true,
+	phoneRegionCode: 'SN'
+});
+
 var cleave = new Cleave('#phone-format-br', {
 	phone: true,
 	phoneRegionCode: 'BR'

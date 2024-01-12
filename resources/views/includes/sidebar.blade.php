@@ -12,7 +12,7 @@
     <div class="sidebar-menu">
         <div class="sidebarMenuScroll">
             <ul>
-                <li>
+                <li @class(['active' => request()->is('dashboard')])>
                     <a wire:navigate href="{{route('dashboard')}}">
                         <i class="bi bi-house"></i>
                         <span class="menu-text">Dashboard</span>
@@ -31,14 +31,15 @@
                             <li>
                                 <a href="signup.html">Signup</a>
                             </li>
-                            <li>
-                                <a href="error.html">Error</a>
-                            </li>
-                            <li>
-                                <a href="maintenance.html">Maintenance</a>
-                            </li>
+                            
                         </ul>
                     </div>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="bi bi-stack-overflow"></i>
+                        <span class="menu-text">Historiques</span>
+                    </a>
                 </li>
                 <li>
                     <a href="{{route('superadmin')}}">

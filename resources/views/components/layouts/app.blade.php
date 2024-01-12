@@ -18,12 +18,14 @@
         <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
         <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
+        <link rel="stylesheet" href="{{ asset('assets/css/iziToast.min.css')}}">
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+        @livewireStyles
     </head>
     <body>
         <!-- Spinner Start -->
@@ -75,8 +77,11 @@
         <script src="{{ asset('assets/lib/waypoints/waypoints.min.js')}}"></script>
         <script src="{{ asset('assets/lib/lightbox/js/lightbox.min.js')}}"></script>
         <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('assets/js/iziToast.min.js')}}"></script>
 
         <!-- Template Javascript -->
         <script src="{{ asset('assets/js/main.js')}}"></script>
+        @yield('js')
+        @livewireScripts
     </body>
 </html>

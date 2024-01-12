@@ -11,16 +11,22 @@
 		<!-- Bootstrap font icons css -->
 		<link rel="stylesheet" href="{{ asset('includes/fonts/bootstrap/bootstrap-icons.css')}}" />
 
+		<link rel="stylesheet" href="{{ asset('includes/vendor/datatables/dataTables.bs5.css')}}" />
+		<link rel="stylesheet" href="{{ asset('includes/vendor/datatables/dataTables.bs5-custom.css')}}" />
+
 		<!-- Main css -->
 		<link rel="stylesheet" href="{{ asset('includes/css/main.min.css')}}" />
 
 		<!-- *************
 			************ Vendor Css Files *************
 		************ -->
+		<link rel="stylesheet" href="{{ asset('assets/css/iziToast.min.css')}}">
 
 		<!-- Scrollbar CSS -->
 		<link rel="stylesheet" href="{{ asset('includes/vendor/overlay-scroll/OverlayScrollbars.min.css')}}" />
-	
+		<link rel="stylesheet" href="{{ asset('includes/vendor/dropzone/dropzone.min.css')}}" />
+
+		@livewireStyles
     </head>
     <body>
 
@@ -108,6 +114,7 @@
 		<!-- *************
 			************ Vendor Js Files *************
 		************* -->
+		<script src="{{asset('assets/js/iziToast.min.js')}}"></script>
 
 		<!-- Overlay Scroll JS -->
 		<script src="{{ asset('includes/vendor/overlay-scroll/jquery.overlayScrollbars.min.js')}}"></script>
@@ -136,7 +143,22 @@
 		<script src="{{ asset('includes/vendor/rating/raty.js')}}"></script>
 		<script src="{{ asset('includes/vendor/rating/raty-custom.js')}}"></script>
 
+		<!-- Data Tables -->
+		<script src="{{ asset('includes/vendor/datatables/dataTables.min.js')}}"></script>
+		<script src="{{ asset('includes/vendor/datatables/dataTables.bootstrap.min.js')}}"></script>
+		<script src="{{ asset('includes/vendor/datatables/custom/custom-datatables.js')}}"></script>
+
+		<!-- Input Mask JS -->
+		<script src="{{ asset('includes/vendor/input-masks/cleave.min.js')}}"></script>
+		<script src="{{ asset('includes/vendor/input-masks/cleave-phone.js')}}"></script>
+		<script src="{{ asset('includes/vendor/input-masks/cleave-custom.js')}}"></script>
+
+		<script src="{{ asset('includes/vendor/dropzone/dropzone.min.js')}}"></script>
+
 		<!-- Main Js Required -->
 		<script src="{{ asset('includes/js/main.js')}}"></script>
+        @yield('js')
+
+		@livewireScripts
     </body>
 </html>

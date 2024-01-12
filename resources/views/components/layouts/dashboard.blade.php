@@ -11,6 +11,7 @@
 		<!-- *************
 			************ Common Css Files *************
 		************ -->
+		<link rel="stylesheet" href="{{ asset('assets/css/iziToast.min.css')}}">
 
 		<!-- Scrollbar CSS -->
 		<link rel="stylesheet" href="{{ asset('themes/vendor/overlay-scroll/OverlayScrollbars.min.css')}}">
@@ -33,7 +34,7 @@
 
 		<!-- Scrollbar CSS -->
 		<link rel="stylesheet" href="{{ asset('themes/vendor/overlay-scroll/OverlayScrollbars.min.css')}}">
-
+		@livewireStyles
     </head>
     <body>
         
@@ -90,6 +91,7 @@
 		<script src="{{ asset('themes/js/bootstrap.bundle.min.js')}}"></script>
 		<script src="{{ asset('themes/js/modernizr.js')}}"></script>
 		<script src="{{ asset('themes/js/moment.js')}}"></script>
+		<script src="{{asset('assets/js/iziToast.min.js')}}"></script>
 
 		<!-- *************
 			************ Vendor Js Files *************
@@ -132,5 +134,7 @@
 		<!-- jQcloud Keywords -->
 		<script src="{{ asset('themes/vendor/tagsCloud/tagsCloud.js')}}"></script>
 		<script src="{{ asset('themes/js/main.js')}}"></script>
+        @yield('js')
+		@livewireScripts
     </body>
 </html>

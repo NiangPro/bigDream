@@ -14,3 +14,16 @@
         @include('livewire.superadmin.agence.list')
     @endif
 </div>
+
+@section('js')
+
+    <script>
+        window.addEventListener('addAgence', event =>{
+            iziToast.success({
+            title: 'Agence',
+            message: 'Ajout avec succès',
+            position: 'topRight'
+            });
+        });
+    </script>
+@endsection        

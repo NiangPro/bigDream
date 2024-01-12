@@ -9,11 +9,11 @@
                 <!-- Row start -->
                 <div class="row align-items-end">
                     <div class="col-auto">
-                        <img src="includes/images/user14.png" class="img-7xx rounded-circle" />
+                        <img src="storage/images/{{ $depot->image }}" class="img-7xx rounded-circle" />
                     </div>
                     <div class="col">
-                        <h6>Admin</h6>
-                        <h4 class="m-0">Felicia Quinn</h4>
+                        <h6>{{ $depot->nom }}</h6>
+                        <h4 class="m-0">{{ $depot->tel }}</h4>
                     </div>
                     <div class="col-12 col-md-auto">
                         <button wire:click='changeStatut(0)' class="btn btn-primary"><i class="bi bi-reply-fill"></i> Retour</button>

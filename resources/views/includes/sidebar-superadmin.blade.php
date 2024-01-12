@@ -4,8 +4,10 @@
     <!-- Sidebar brand starts -->
     <div class="brand">
         <a href="index.html" class="logo">
-            <img src="includes/images/logo.svg" class="d-none d-md-block me-4" alt="Rapid Admin Dashboard" />
-            <img src="includes/images/logo-sm.svg" class="d-block d-md-none me-4" alt="Rapid Admin Dashboard" />
+            {{-- <img src="includes/images/logo.svg" class="d-none d-md-block me-4" alt="Rapid Admin Dashboard" /> --}}
+            <span class="d-none d-md-block me-4 text-white fs-2">BigDream</span>
+            <span class="d-block d-md-none me-4 fs-1">BD</span>
+            {{-- <img src="includes/images/logo-sm.svg" class="d-block d-md-none me-4" alt="Rapid Admin Dashboard" /> --}}
         </a>
     </div>
     <!-- Sidebar brand ends -->
@@ -22,19 +24,25 @@
                 </li>
                 <li  class="@if(request()->is('agences')) active @endif">
                     <a wire:navigate href="{{route('agence')}}">
-                        <i class="bi bi-bank"></i>
+                        <i class="bi bi-shop"></i>
                         <span class="menu-text">Agences</span>
                     </a>
                 </li>
-                <li class="sidebar-dropdown active">
+                <li  class="@if(request()->is('historiques')) active @endif">
+                    <a wire:navigate href="{{route('historique')}}">
+                        <i class="bi bi-archive-fill"></i>
+                        <span class="menu-text">Historiques</span>
+                    </a>
+                </li>
+                <li class="sidebar-dropdown @if(request()->is('admins')) active @endif">
                     <a href="#">
-                        <i class="bi bi-layout-sidebar"></i>
-                        <span class="menu-text">Layouts</span>
+                        <i class="bi bi-people-fill"></i>
+                        <span class="menu-text">Utilisateurs</span>
                     </a>
                     <div class="sidebar-submenu">
                         <ul>
                             <li>
-                                <a href="layout.html" class="current-page">Default Layout</a>
+                                <a wire:navigate href="{{route('admin')}}" class="@if(request()->is('admins')) current-page @endif">Admins</a>
                             </li>
                             <li>
                                 <a href="{{route('dashboard')}}">Dashboard</a>
